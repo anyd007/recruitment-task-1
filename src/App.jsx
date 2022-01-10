@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Datalist from "./Datalist";
+import './App.css'
 
 class App extends Component {
     constructor(){
@@ -16,7 +17,7 @@ class App extends Component {
             return <Datalist firstName = {el.firstName} lastName = {el.lastName} department = {el.department} salaryAmount = {el.salaryAmount}/>
         })
         return(
-        <div>
+        <div className="app">
          {workers}
      </div>
         )}

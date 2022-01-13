@@ -6,3 +6,10 @@ export function validInputs(val){
     }
 }
 
+export function hideShow(val){
+    if(Array.isArray(val) && val.length){
+        return true
+    }else{
+        return false
+    }
+}

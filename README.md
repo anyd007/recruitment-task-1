@@ -9,4 +9,5 @@ W komponencie AddForm.jsx sprawdzam czy pola inmutów nie są puste if(val.lengt
     }
 Postawiam ją pod zmienną     const validInputsCheck  i ustawiam jako wartość <buton disabled=…>,
 Ponieważ disabled jest ustawiny domyślnie na false a validInputsCheck po spełnieniu warunków jest true, warunek na true nie może zostać spełniony, bo wtedy zadziała domyślne ustawnie buton disabled. Zapisuję więc ‘!validInputsCheck’.
+ Przez użycie funkcji dodatkowej która sprawdza czy tablica nie jest pusta ‘function hideShow’, jeżeli warunek przechodzi na ‘true’ wyświetla się komponent ‘title.jsx’
 

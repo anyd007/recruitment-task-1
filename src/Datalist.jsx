@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 import './datalist.css'
 
 
-const Datalist = props => (
+const Datalist = props => {
+return(    
 <div>
     <table>
         {/* <thead>
@@ -13,13 +14,13 @@ const Datalist = props => (
         </thead> */}
         <tbody>
         <tr>
-            <td>{props.firstName}</td><td>{props.lastName}</td><td>{props.department}</td><td>{props.salaryAmount}</td>
+        <td>{props.firstName}</td><td>{props.lastName}</td><td>{props.department}</td><td>{props.salaryAmount}</td>
         </tr>
         </tbody>
     </table>
 </div>
 
-);
+)};
 Datalist.propTypes = {
     firstName: PropTypes.string,
     lastName: PropTypes.string,

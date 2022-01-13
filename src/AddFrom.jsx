@@ -53,7 +53,7 @@ AddForm.propTypes = {
     firstName: PropTypes.string,
     lastName: PropTypes.string,
     department: PropTypes.string,
-    salaryAmount: PropTypes.string
+    salaryAmount: PropTypes.number
 }
 
 export default AddForm;

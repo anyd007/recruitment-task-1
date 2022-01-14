@@ -14,3 +14,8 @@ table, th {
   h1{
       margin-bottom: 0%;
   }
+  .open-filter-btn{
+      font-size: 28px;
+      margin-top: 0%;
+      width: 15%;
+  }

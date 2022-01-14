@@ -1,11 +1,15 @@
 import React from 'react';
 import './title.css'
-import { validInputs } from './extras'
+import TableFilter from './tableFilter';
 
 
-const Title = (props) =>(
+const Title = (props) =>{
+    const [state, setState] = React.useState(false)
+    return(
 <div className='title'>
-    
+{state ? <TableFilter /> : null}
+{!state ? <button onClick={() => setState(true)} className='open-filter-btn'>workers filter</button> : null}
+
     <h1>workers</h1> 
     <table>
         <thead>
@@ -16,7 +20,8 @@ const Title = (props) =>(
     </table> 
 
 </div>
-)
+    )
+}
   
 
 export default Title;

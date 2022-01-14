@@ -3,9 +3,9 @@ import Datalist from "./Datalist";
 import './App.css'
 import Title from "./Title";
 import AddForm from "./AddFrom";
+import TableFilter from "./tableFilter";
 import uniqid from 'uniqid';
 import { hideShow } from './extras'
-import { validInputs } from './extras'
 
 class App extends Component{
     constructor(){
@@ -67,8 +67,8 @@ class App extends Component{
          salaryAmount={this.state.newWorkers.salaryAmount}
          onSave={()=>this.handleSaveForm()}
          onInputChange={(val) => this.handleAddForm(val)}
-        //  showHideSummary={this.state.showHideSummary} 
          />
+        
      </div>
         )}
 }

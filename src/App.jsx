@@ -4,6 +4,7 @@ import './App.css'
 import Title from "./Title";
 import AddForm from "./AddFrom";
 import TableFilter from "./tableFilter";
+import Summary from './Summary'
 import uniqid from 'uniqid';
 import { hideShow } from './extras'
 
@@ -19,8 +20,8 @@ class App extends Component{
                 department:'',
                 salaryAmount:''
             },
-            name: "React",
-            Summary: false,
+             summary:[0]
+            
         }
     }
     handleAddForm = (val) =>{
@@ -42,10 +43,18 @@ class App extends Component{
             }
         }))
     }
+
+    handleSaleryAmountSum =()=>{
+        this.setState(prev =>({
+           
+                summary: [...prev.summary, ...prev.workers]
+            
+        }))
+    }
+
     render() {
         let show = hideShow(this.state.workers)
-        console.log(show);
-
+        // console.log(show);
         let workers = this.state.workers.map(el =>{
             return <Datalist
             firstName = {el.firstName} 
@@ -53,13 +62,19 @@ class App extends Component{
             department = {el.department} 
             salaryAmount = {el.salaryAmount}/>
             })
+        // let summary = this.state.workers.map(el => {
+        //     return <>salaryAmount={el.salaryAmount}</>
+        // }) 
+        
+        
         return(
         <div className="app">
             {show === true && <Title />}
          {workers}
-         {/* <Summary 
-         salaryAmount={this.state.newWorkers.salaryAmount}
-         /> */}
+         {/* {SumValue} */}
+        {show === true && <Summary
+         sumValue={this.state.summary}
+         saveSum={()=>this.handleSaleryAmountSum()}/>}
          <AddForm 
          firstName={this.state.newWorkers.firstName}
          lastName={this.state.newWorkers.lastName}

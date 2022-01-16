@@ -6,6 +6,7 @@ const TableFilter = ()=>{
     const [state, setState] = React.useState(false)
     return(
     <div className="table-filter">
+        <h3 className="info">unfortunately, this element is not yet functional</h3>
     <h3 className="filter-name-component">Filter for the workers table</h3>
         <div className="table-filter_inputs">
             <label htmlFor='filter-person'>find worker</label><br/>
@@ -19,9 +20,10 @@ const TableFilter = ()=>{
             <label htmlFor='filter-salary'>salary filter</label><br/>
             <input type="range" name="filter-salary"/>
         </div>
-            <button>find</button>
-            <button onClick={() => setState(prev => !prev)}>close filter</button>
-            {state && TableFilter}
+            <button disabled >find</button>
+           {!state ? <TableFilter/> : null}
+            <button disabled onClick={() => setState(true)}>close filter</button>
+        
         
 
     </div>

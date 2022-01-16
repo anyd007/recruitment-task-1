@@ -13,3 +13,12 @@ export function hideShow(val){
         return false
     }
 }
+
+export function sumArry(val){
+    if(Array.isArray(val) && val.length){
+        val.reduce((prevValue, next) => prevValue+next, 0)
+    }else{
+        return false
+    }
+}
+

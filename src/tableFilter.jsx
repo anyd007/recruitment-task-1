@@ -2,8 +2,8 @@ import React from "react";
 import './table-filter.css';
 
 
-const TableFilter = ()=>{
-    const [state, setState] = React.useState(false)
+const TableFilter = (props)=>{
+    
     return(
     <div className="table-filter">
         <h3 className="info">unfortunately, this element is not yet functional</h3>
@@ -21,8 +21,9 @@ const TableFilter = ()=>{
             <input type="range" name="filter-salary"/>
         </div>
             <button disabled >find</button>
-           {!state ? <TableFilter/> : null}
-            <button disabled onClick={() => setState(true)}>close filter</button>
+            {/* <button onClick={() => props.onHide()}>close filter</button>
+            {props.onHide ? <TableFilter/> : <TableFilter/>} */}
+           
         
         
 

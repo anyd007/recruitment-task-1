@@ -20,7 +20,10 @@ class App extends Component{
                 department:'',
                 salaryAmount:''
             },
-             summary:[0]
+             summary:[0],
+             hideElement: true
+             
+             
             
         }
     }
@@ -51,6 +54,13 @@ class App extends Component{
             
         }))
     }
+    handleHideEle=() =>{
+        this.setState(prevState => ({
+          hideElement: !prevState.hideElement
+        }));
+      }
+    
+    
 
     render() {
         let show = hideShow(this.state.workers)
@@ -65,14 +75,17 @@ class App extends Component{
         // let summary = this.state.workers.map(el => {
         //     return <>salaryAmount={el.salaryAmount}</>
         // }) 
-        
+        // let useHideBtn = <TableFilter
+    
+        // let onHide=()=> this.state.handleHideEle()
+    
         
         return(
         <div className="app">
             {show === true && <Title />}
+            {/* {onHide} */}
          {workers}
-         {/* {SumValue} */}
-        {show === true && <Summary
+         {show === true && <Summary
          sumValue={this.state.summary}
          saveSum={()=>this.handleSaleryAmountSum()}/>}
          <AddForm 
